@@ -19,7 +19,8 @@ This project will show how to:
 * input your data
 * use a "while" loop
 * create a function
-* TBA
+* dictionaries
+* classes
 
 ## Screenshots
 TBA
@@ -36,6 +37,8 @@ TBA
 * input your data
 * use a "while" loop
 * create a function
+* dictionaries
+* classes
 
 ## Status
 Project is: _in progress_
