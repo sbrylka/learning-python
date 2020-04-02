@@ -29,11 +29,24 @@ TBA
 * Python 3.8.2
 
 ## Code Examples
-`TBA`
+``` Python
+available_toppings = ['pieczarki', 'oliwki', 'boczek', 'pepperoni',
+					'ananas', 'podwójny ser']
+
+requested_toppings = ['pieczarki', 'frytki', 'podwójny ser']
+
+for requested_topping in requested_toppings:
+	if requested_topping in available_toppings:
+		print("Dodaję " + requested_topping + ".")
+	else:
+		print("Przepraszamy, ale obecnie nie mamy dodatku " +
+			requested_topping + ".")
+
+print("\nTwoja pizza jest już gotowa")
+```
 
 ## To do list
 * sort your list
-* make an "if"
 * input your data
 * use a "while" loop
 * create a function
