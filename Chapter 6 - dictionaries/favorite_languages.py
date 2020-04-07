@@ -41,3 +41,18 @@ for language in favorite_languages.values():
 print("\nW ankiecie zostały wymienione następujące języki programowania:")
 for language in set(favorite_languages.values()):
 	print(language.title())
+
+###
+
+favorite_languages = {
+	'janek': ['python', 'ruby'],
+	'sara': ['c'],
+	'edward': ['ruby', 'go'],
+	'paweł': ['python', 'haskell'],
+	}
+	
+for name, languages in favorite_languages.items(): 
+	print("\nUlibione języki programowania użytkownika " + name.title()
+	+ " to:")
+	for language in languages:
+		print("\t" + language.title())

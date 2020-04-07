@@ -32,3 +32,42 @@ print("Nowa wartość x_position: " + str(alien_0['x_position']))
 
 del alien_0['points']
 print(alien_0)
+
+###
+
+alien_0 = {'color': 'zielony', 'points': 5}
+alien_1 = {'color': 'zółty', 'points': 10}
+alien_2 = {'color': 'czerwony', 'points': 15}
+
+aliens = [alien_0, alien_1, alien_2]
+
+for alien in aliens:
+	print(alien)
+	
+###
+
+aliens = []
+for alien_number in range(30):
+	new_alien = alien_0 = {'color': 'zielony', 'points': 5, 'speed': 'wolno'}
+	aliens.append(new_alien)
+	
+for alien in aliens[:5]:
+	print(alien)
+print("...")
+
+print("Całkowita liczna obcych: " + str(len(aliens)))
+
+for alien in aliens[0:3]:
+	if alien['color'] == 'zielony':
+		alien['color'] = 'żółty'
+		alien['speed'] = 'średnio'
+		alien['points'] = 10
+	elif alien['color'] == 'żółty':
+		alien['color'] = 'czerwony'
+		alien['speed'] = 'szybko'
+		alien['points'] = 15
+
+for alien in aliens[:5]:
+	print(alien)
+print("...")
+
