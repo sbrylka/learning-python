@@ -1,8 +1,8 @@
 ulubione_liczby = {
-	'Sebastian': 4,
-	'Yarek': 66,
+	'Sebastian': [4, 44],
+	'Yarek': [66, 666],
 	'Ania': 57,
-	'Sandra': 12,
+	'Sandra': [12, 7],
 	'Filip': 0,
 	}
 

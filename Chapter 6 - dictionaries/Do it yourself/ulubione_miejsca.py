@@ -5,4 +5,7 @@ favorite_places = {
 	}
 
 for osoba, miejsce in favorite_places.items():
-	print(osoba + " mówił(a), że " + miejsce + " jest jej/jego ulubionym miejscem.")
+	if favorite_places.items() == 'Ania':
+		print(osoba + "mówiła, że " + miejsce + " jest jej ulubionym miejscem.") 
+	else:
+		print(osoba + " mówił, że " + miejsce + " jest jego ulubionym miejscem.")
