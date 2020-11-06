@@ -30,21 +30,36 @@ class Car():
 		"""Inkrementacja wartości licznika samochodu o podaną wartość"""
 		self.odometer_reading += kilometers
 		
-#my_new_car = Car('audi', 'a4', 2016)
-#print(my_new_car.get_descriptive_name())
-#my_new_car.read_odometer()
+class Battery():
+	"""Prosta próba modelowania akumulatora samochodu elektrycznego."""
+	
+	def __init__(self, battery_size = 70):
+		"""Inicjalizacja atrybutów akumulatora."""
+		self.battery_size = battery_size
+	
+	def describe_battery(self):
+		"""Wyświetlenie informacji o wielkości akumulatora."""
+		print("Ten samochód ma akumulator o pojemności " +
+		str(self.battery_size) + " kWh.")
+		
+	def get_range(self):
+		"""Wyświetla informacje o zasięgu samochodu na podstawie
+		pojemności akumulatora."""
+		if self.battery_size == 70:
+			range = 240
+		elif self.battery_size == 85:
+			range = 270
+		
+		message = "Zasięg tego samochodu wynosi około " + str(range)
+		message += " km po pełnym naładowaniu akumulatora."
+		print(message)
 
-#my_new_car.odometer_reading = 23
-#my_new_car.read_odometer()
-
-#my_new_car.update_odometer(23)
-#my_new_car.read_odometer()
-
-#my_used_car = Car('subaru', 'outback', 2013)
-#print(my_used_car.get_descriptive_name())
-
-#my_used_car.update_odometer(23500)
-#my_used_car.read_odometer()
-
-#my_used_car.increment_odometer(100)
-#my_used_car.read_odometer()
+class ElectricCar(Car):
+	"""Przedstawia cechy charakrerystyczne samochodu elektrycznego."""
+	
+	def __init__(self, make, model, year):
+		"""Inicjalizacja atrybutów clasy nadrzędnej.
+		Następnie inicjalizacja atrybutów charakterystyczych 
+		dla samochodu elektrycznego."""
+		super().__init__(make, model, year)
+		self.battery = Battery()
